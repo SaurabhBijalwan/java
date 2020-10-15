@@ -1,0 +1,37 @@
+Question 1:
+Diff Intermediate and Terminal Operations
+1 :The Intermediate Operations produces stream pipelining While 
+Terminal operations Terminate the pipelining
+2: Intermediate operations can be chained multiple times on a stream
+While Terminal operation cannot ne chained
+3: Intermediate operation cannot be evaluated independently it needs a Terminal operation for evaluation 
+While Terminal operation can be evaluated independently .
+
+Question 2 :
+What is the purpouse of functional interface in Java 8
+Functional interface are those interface that have a single funcationality
+Example :
+CompareTo -- This interface is only to compare purpouse
+Function---this interface accepts only one argument and gives the result.
+This interface means that an object is tested to be either true or false.
+
+Question 3:
+What are the new features of Java 8 
+New features introduced in Java 8 are:-
+Introduction of Lambda Expression- first step to functional programming
+New stream API to support pipeline processing.
+Optional − Emphasis on handling null values properly.
+Nashorn Engine- Provides better performance than Rhino javascript engine.
+
+
+Question 4:
+What is Lambda expression 
+Lamba expression is considered as the most significant feature of Java8. 
+A Lambda expression provides functional programming, and 
+that has simplified the code to a great extent. 
+A lambda expression is fundamentally a function which can be created
+without belonging to any class.
+
+Question 5:
+What is Method reference in Java 8 ?
+https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
