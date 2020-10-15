@@ -34,4 +34,17 @@ without belonging to any class.
 
 Question 5:
 What is Method reference in Java 8 ?
-https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
+URL https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
+Defination :
+Method references support in pointing to the methods by their names. 
+A method reference is denoted by using "::" symbol. 
+A method reference is used to indicate the following methods
+
+Static methods
+Instance methods
+Constructors using new operator (TreeSet::new)
+
+Question 6 :
+What is the meaning of value of reference 
+
+URL:https://www.bestinterviewquestion.com/java-8-interview-questions
