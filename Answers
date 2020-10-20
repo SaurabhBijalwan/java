@@ -1,0 +1,30 @@
+Answers 1 : Both interface
+java.lang.Comparable                               java.util.Comparator  
+
+Default sorting order                            Comprator is ment for coustomiozation sorting order
+
+compareTo()                                      compare() equals()    
+
+All Wrapper and String class implements           only 2 classes collator and RuleBasesCollator
+
+When to use Comparator ? Two Situation When class is not implementing comparable 
+
+example 
+Steps implements Comparable;
+logic  inside compareTo(Laptop l2) //  1 0 -1 
+
+ArrayList<Laptop> laptops = new ArrayList<Laptop>();
+Laptop l1 = new Laptop(1,"Acer",2000); 
+Laptop l2 = new Laptop(1,"Dell",3000);
+Laptop l3 = new Laptop(1,"HP",2500);
+
+laptops.add(l1)
+laptops.add(l2)
+laptops.add(l3)
+
+Comparable
+compareTo()
+
+
+Collection.sort(laptops);
+
