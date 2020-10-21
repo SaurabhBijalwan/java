@@ -1,0 +1,16 @@
+Question 1
+Write program
+Input 26 output -A
+Input 27 output - AA
+
+A B C DEFGHJKLMNOPQRSTUVWXYZ AA AB ....AAAA
+
+Question 2
+Merge Two sorted link list 
+1-4-6-8-10
+2-5-7-9-11
+output :1-2-4-6-7-8-9-10-11
+
+Question 3
+Final Finally finalize 
+
