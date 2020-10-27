@@ -214,4 +214,59 @@ compiler will consider return value automatically
 
 Rules 2: Within curly braces if we want to return some value we should use return statement
 
+Question 
+In java 1.8 default method introduce can we take in funcational interface
+YES 
+Remember Concept : Restriction is applicable for abstract method i.e only one abstract method
+so any number of static and default method is allowed 
+
+Explanation:
+FIEX1.java 
+
+@FuncationInterface
+interface FIEX1 {
+public void m1();
+public void m2(){}
+public void m3(){}
+
+}
+
+Explanation : Inheritence
+
+@FunctionalInterface
+interface FIEX2
+{
+public void m1();
+}
+
+@FunctionalInterface
+interface FIEX3 extends FIEX2 {
+
+}
+
+
+Question :Can we use Lambda expression without functional interface 
+Explation 
+
+interface I4 {
+public void m1(String s1);
+public void m2(String s2);
+
+}
+
+class FIEX6 {
+public static void main(String args[]) {
+
+    I4 d4 = (s1)->System.out.println("calling function" +s1);
+}
+
+}
+
+Rule :Lambda expression can be used where funcation interface ;
+
+
+https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
+https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3
+
+
 
