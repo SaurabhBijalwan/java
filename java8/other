@@ -1,1 +1,217 @@
+Java New Features
 Java 8 version release on 18 March 2014
+Due you know most current version of Java 
+Java 10 - It is unfortunate that after Java 10 we are discussing about the Java 8 
+
+Earlier perople are not taking much import to java 8 after new version people are taking importance of Java 
+after 3 years perople will give importance to java 9 or 10
+
+Do you know about SCALA python 2013 Around other language are taking the popularity 
+Reason : Because 10 lines having power in long java code 
+Python few lines compare to Java 
+Slowly people are moving the other language 
+Java people Analyse it and some changes are done i.e Java 8 NEQ feature are introduced 
+
+CONCISE CODE -Advantage 
+HOW They ge t Sir ?
+Just because of enabling Functaionaling programming 
+Earlier java is object oriented programming 
+Java people having EGO about HEY we are object oriented programming 
+
+EGO Removed after Java 8 -Java suppourt Funcational progreamming 
+Lambda Expression:
+It is introduced for enabling functional programing 
+FUNCTION means method 
+input => some argument and return some output 
+
+Syntax: java.util.function.Function;
+Function<Integer , Integer> f =i-> i*i; 
+
+A function we can handle the function as Object;
+
+LESS CODE FOR MORE THINGS 
+
+Topic 1 : Lambda Expression 
+Topic 2 : Funcation Interfaces
+Topic 3 : Default Method or static method;
+Topic 4 : Predefine Functional Interfaces
+          Predicate
+          Funcational
+          Consumer
+          Supplier
+          etc
+Topic 5 : Function Concept 
+Topic 6 : Double colon operator ::
+Topic 7 : Reference function and constructor
+Topic 8 : Date and Time Api
+Topic 9 : Stream Class
+Topic 10: Optional Class
+Topic 11: Nashron Javascript Engine
+
+
+Topic 1 Lambda Expression :
+Lambda calculus in Mathamitics solved tough problem easily 1930 
+Slowly Programmer are start using lambda 
+First programing language which uses Lambda expression LISP
+
+Is Lambda expression is speciality of Java ? Answer : NO because of Object oriented Nature only
+RUBY CSharp phython LISP other languages already having functional programming
+
+Question What is the main objective of Lambda Expression ?
+To bring benefits of functional programming into Java 
+
+What is the Lambda Expression ?
+It is an anonymous  Function 
+
+What is anonymous  ?
+means NameLess
+
+How to write anonymous  funcation ?
+Without name and return type and without modifiers 
+
+Please confirm writing lambda expression is difficult or easy 
+Very Very Very Easy Concept even Nursury Level 
+Reason : means you dont learn properly 
+
+How to write in Lambda Expression ?
+() -> {} 
+-> Symbol for Lambda Expression 
+Remove function name
+Remove return name
+Remove return type 
+Sir if body contain only one line {} not required 
+
+or 
+public void myFunction() {
+System.out.println("Lambda Expression are used for introducing or using functional Programming in Java language like other Language");
+
+}
+
+Example 2 :
+public void myFunction2(int a,int b) {
+System.out.println(a+b);
+
+}
+
+Lambda Expression:
+(a,b) -> System.out.println(a+b);
+Automatically compiler will Guess the Type ;
+So remove input Type
+
+Example 3 :
+
+public int square(int n ){
+
+    return (n*n);
+}
+
+Lambda Expression:
+(int n) -> { return n*n;}
+
+or
+(int n) -> n*n;
+or
+or 
+(n) -> n*n; 
+or 
+n->n*n;
+
+
+
+if you remove {} than return is not required as shown above;
+
+Example 3 ;
+public string length(String s){
+    return s.length();
+}
+
+Lambda Expresssion :
+(s) -> s.length();
+
+or 
+s-> s.length();
+
+
+Topic : How to Call the Lambda Expresssion ;
+We go for FI 
+
+What is FI ?
+Funcational Interface 
+
+What is Funcation Interface ;
+Funcation Interface is new but concept is OLD 
+
+Have you heard about Runnable Interface , CompareTo Funcation , Callable in multithreading 
+Do you know all these are Functional Interefaces 
+
+What is the common point in above 
+Common is that all contain only one abstract method 
+Runnable contain run() method 
+Comparable CompareTo()
+Comparator compare()
+ActionListner actionPerformed()
+Callable contain call() method
+
+
+SAM - Single Abstract Mehod 
+To invoke Lambda expression funcation interface is required ;
+
+What is Functional Interface ?
+Functional interface contain only single abstract method 
+
+Single Word explanation 
+
+Lambda Expression - anonymous function 
+Function interfce - SAM - Single Abstract method 
+
+Example :
+public void m1() {
+
+    System.out.println("Hello");
+}
+
+Lambda Expression :
+() -> System.out.println("Hello");
+
+Lambda Expression always going to express the one method;
+
+Special Symbol -> i.e arrow or 
+
+Example 2 :
+public void add(int a , int b){
+System.out.println(a+b);
+
+}
+
+Lambda expression 
+(a,b) ->{System.out.println(a+b);}
+
+Example 3:
+
+public int square(int n){
+
+    return n*n ;
+}
+
+Lambda Expression :
+n-> n*n;
+
+if u have only one argument parenthesis are optional (n) or n
+(a,b) - Two argument parenthesis required
+()  - No argument parenthesis is required 
+
+
+Statement : Valid Invalid 
+n-> return n*n; Invalid
+n->{return n*n;}; Valid
+n->{return n*n}; Invalid
+n->{n*n;};Invalid
+n->n*n; Valid
+
+Conclusion:
+Rules 1: Without curly braces we cannot use return keyword 
+compiler will consider return value automatically
+
+Rules 2: Within curly braces if we want to return some value we should use return statement
+
+
