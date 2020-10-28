@@ -262,7 +262,89 @@ public static void main(String args[]) {
 
 }
 
-Rule :Lambda expression can be used where funcation interface ;
+Rule :Lambda expression can be used where functional interface ;
+
+Question 
+Lambda Expression are equivalent to ananoymus class
+NO because no seperate class file created in case of lambda class while in ananoymus class will generate seperate class 
+
+Question :
+Do you know how many ways thread can define thread
+1 Implementing Runnable interface 
+2 Extending Thread class 
+
+Code : 
+class MyRunnable implements Runnable {
+
+    public void run(){
+for(int i =0; i<10;i++){
+    System.out.println("Child Thread :"+i);
+}
+    }
+}
+class MyRunnableTest {
+    public static void main(String args[]){
+MyRunnable r = new MyRunnable();
+Thread t = new Thread(r);
+t.start();
+for(int i =0; i<10;i++){
+    System.out.println("Main Thread :"+i);
+}
+    }
+}
+
+
+Question : Collection using Lambda Expression 
+MyCollection.java and MyCollectionL.java
+
+If you want sorting go for
+Comparator -Interface
+int compare(Object obj1 ,Object obj2)
+ return -ve iff obj1 has to come before obj2
+return +ve iff obj1 has to come after obj2
+return 0 off obj1 and obj2 are equal
+
+class Mycomparator implements Comparator<Integer> {
+
+public int compare(Integer I1 , Integer I2){
+
+
+return I1<I2?-1:(I1>I2)?1:0;
+
+// Using Tenatory operation single line 
+
+  /*   if(I1<I2){
+        return -1;
+    }
+    else if(I1>I2){ return 1;}
+    else {return 0;} */
+}
+
+}
+
+MyCollectionL.java 
+import java.util.*;
+import java.util.stream.*;
+class MyCollectionL {
+    public static void main(String args[]){
+    Comparator<Integer> c = (I1,I2)->I1<I2?-1:(I1>I2)?1:0;
+    ArrayList<Integer> i = new ArrayList<Integer> ();
+        i.add(100);
+        i.add(2);
+        i.add(3);
+        i.add(400);
+        i.add(50);
+        i.add(1);
+        System.out.println(" Printing sequence as you insert the number by default :"+i);
+        Collections.sort(i,c);
+        System.out.println("Sorted list is printing : "+i);
+        i.stream().forEach(System.out::println);
+        List<Integer> i2=i.stream().filter(j->j%2==0).collect(Collectors.toList());
+        System.out.println("Only Even number is printing"+i2);
+}
+}
+
+Discuss Lambda Express with Ananoymus classes
 
 
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
