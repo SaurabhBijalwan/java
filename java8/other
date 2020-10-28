@@ -345,7 +345,145 @@ class MyCollectionL {
 }
 
 Discuss Lambda Express with Ananoymus classes
+If you want sorting go for
+Comparator -Interface
+int compare(Object obj1 ,Object obj2)
+ return -ve iff obj1 has to come before obj2
+return +ve iff obj1 has to come after obj2
+return 0 off obj1 and obj2 are equal
 
+Terniary operation 
+(e1,e2)->(e1.eno>e2.eno)?-1:(e1.eno>e2.eno)>1:0
+
+
+import java.util.*;
+import java.util.stream.*;
+
+class Employee {
+String name;
+int id;
+Employee(int id,String name){ this.id=id;this.name=name;}
+
+ public String toString(){
+ return "id: "+id +" name: "+name;
+} 
+}
+
+public class MyAnanoymus {
+public static void main(String args[]){
+    Employee emp1 =new Employee(1,"Saurabh");
+    ArrayList<Employee> l = new ArrayList<Employee>();
+l.add(new Employee(1,"Saurabh"));
+l.add(new Employee(2,"Gaurav"));
+l.add(new Employee(79,"Swati"));
+l.add(new Employee(5,"Neha"));
+l.add(new Employee(78,"Ritu"));
+System.out.println(emp1); // Without implementing toString() Hashcode is printing 
+// After implemeting emp1 internally calling toString() method
+System.out.println(" Default as Inserted "+l);
+
+Collections.sort(l,(e1,e2)->(e1.id<e2.id)?-1:(e1.id>e2.id)?1:0); // Lambda Expression Comparator
+System.out.println("Sorted Using Empid: "+l);
+
+Collections.sort(l,(e1,e2)-> e1.name.compareTo(e2.name)); // Lambda Expression compareTo
+System.out.println("Sorted Using Names: "+l);
+
+}
+
+}
+
+Concept:
+Anonymous Inner classes Vs Lambda Expression:
+The class dont having name is called Anonymous 
+
+Thread t = new Thread();
+
+Thread t = new Thread()
+{
+....
+};
+
+We are writing a class that extends Thread class withou name as shown above 
+
+Runnable r - new Runnable(); >. Invalid Interface object cannot created 
+
+Runnable r = new Runnable(){
+
+    ...
+}
+
+Now above creating a child class for Runable interface 
+Annonymous class is implementing the Runnable interface 
+Annonymous class is extend the Thread class
+
+public class MyAnonymous {
+public static void main(String args[]){
+ Runnable r = new Runnable (){
+     public void run(){
+         for(int i=0;i<10;i++){
+             System.out.println("Thread Child class Implemetation in Anonymous class");
+         }
+     }
+ };
+
+ Thread t = new Thread(r);
+ t.start();
+for(int i=0;i<10;i++){
+             System.out.println("Main Thread is running");
+         }
+
+}
+
+
+
+
+public class MyAnonymousL {
+
+    public static void main(String args[]){
+
+        System.out.println("Lambda Expression");
+
+        Runnable r = ()->{
+            for(int i=0;i<10;i++){
+             System.out.println("Thread Child class Implemetation in Anonymous class");
+         }
+        };
+
+        Thread t = new Thread(r);
+ t.start();
+for(int i=0;i<10;i++){
+             System.out.println("Main Thread is running");
+         }
+
+}
+    }
+
+Question :
+Which one is more powerful Anonymous class or Lambda Expression 
+Anonymus Inner class is more powerful 
+
+Explanation 
+interface I {
+m1();
+m2()
+
+}
+
+Above Interface I we can go for anonymus Inner class but not lambda expression because two abstract method 
+Functional Interface fails the Rule only one abstract method but here m1 and m2
+I i = new I(){
+m1(){
+    ...
+}
+
+m2(){
+    ....
+}
+}
+
+Anonymous Inner class != Lambda Expression 
+
+Practice :if employee class has employee id and salary then how to find second highest salary based on employee id
 
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
 https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3
