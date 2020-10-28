@@ -714,8 +714,112 @@ class C(P1,P2):pass
 so if class C(P2,P1) then P2 m1 method is called :pass
  
 
+----------------
+interface P1 {
+    default void m1(){
+        System.out.println("P1 method");
+    }
+}
+
+interface P2{
+default void m1(){
+    System.out.println("P2 Method");
+}
+
+}
+public class MyDefaultMethod implements P1 ,P2{
+    public static void main(String args[]){
+MyDefaultMethod test = new MyDefaultMethod();
+test.m1();
+
+    }
+}
+
+compile time error:
+m1() from Types P1 and P2 
+
+How to resolve
+Just override m1 in child class 
+
+interface P1 {
+    default void m1(){
+        System.out.println("P1 method");
+    }
+}
+
+interface P2{
+default void m1(){
+    System.out.println("P2 Method");
+}
+
+}
+public class MyDefaultMethod implements P1 ,P2{
+
+    public void m1(){
+
+        System.out.println("Our Own m1() Method");
+    }
+    public static void main(String args[]){
+MyDefaultMethod test = new MyDefaultMethod();
+test.m1(); 
+
+    }
+}
+// O/p :Our Own m1() Method"
+
+Modified  :P1.super.m1();
+  public void m1(){
+
+        //System.out.println("Our Own m1() Method");
+        P1.super.m1();
+    }
+
+    // O/p :P1 method"
+
+Modified  :P2.super.m1();
+  public void m1(){
+
+        //System.out.println("Our Own m1() Method");
+        P2.super.m1();
+    }
+        // O/p :P2 method"
 
 
+   Question :
+   Can java suppourt Multiple inheritence at Class Level
+   No
+
+   Question :
+   Can java suppourt Multiple inheritence at inteface Level 
+   Yes 
+
+   Question :
+   What is multiple inheritence ?
+   Mutiple inheritence means inherting same method from different parents .  
+   Remember this :P2.super.m1();   
+
+Question 
+Among class vs interface which is costly 
+class is costly because having constructor ,static block instance blcok 
+inteface is very light weight 
+
+
+Question 
+For static Object is not required so why go for class go for Interface 
+
+public static void m1(){}
+so from 1.8 we can call add static method in interface 
+
+interface I {
+
+    public static void m1(){
+        System.out.println("Satic method");
+    }
+}
+
+Question :
+By Default static method are not available for child class 
+only one way for calling static method in interfaces I.m1();
 
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
 https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3
