@@ -485,8 +485,241 @@ Anonymous Inner class != Lambda Expression
 
 Practice :if employee class has employee id and salary then how to find second highest salary based on employee id
 
+Completed Till Now 
+Lambda Expression
+Funcation Interface 
+Anonymous Inner class vs Lambda Expression 
+------------------------------------------
+Anonymous Inner class can extend a normal class
+Anonymous Inner class can extends an abstract class
+Anonymous Inner class can implement an interface which contains any number of abstract methods 
+
+Lambda Expression can implement an interface 
+which contain a single abstract method (FI)
+
+Anonymous Inner class != Lambda Expression
+Anonymous Inner class > Lambda Expression
+
+Next Topic : Default method 
+For 8 version we can declare default method 
+Purpouse : Until Before 1.8 every method inside inside interface is public and abstract .
+Explanation 
+interface I {
+    m1();
+    m2();
+    m3();
+}
+// public and abstract weather declare or not 
+ later in 1.8 version 
+
+ default method and static method are allowed 
+
+ later in 1.9 
+ private method are also allowed 
+
+ But what about variable inside interface 
+ weather in 1.7 1.8 and 1.9 every variable is public final static 
+
+ Question 
+ Any updation in variable inside ineterface 
+ No updation same rule every variable is public final and static 
+
+ Default Method || Virtual Extension Method || Defender method
+ =============================================================
+ Defender : Meaning protection 
+
+ Question :
+ Why default method is known as Defender method also
+
+ interface I{
+public void m1();
+public void m2();
+ }
+
+ class Test1 implements I {
+     public void m1(){
+         ...
+     }
+     public void m2(){
+         ....
+     }
+ }
+
+ class Test2 implements I {
+     public void m1(){
+         ...
+     }
+     public void m2(){
+         ....
+     }
+ }
+
+.
+.
+.
+ class Test100 implements I {
+     public void m1(){
+         ...
+     }
+     public void m2(){
+         ....
+     }
+ }
+
+
+Tommorrow I want add new method to the interface 
+i.e 
+ interface I{
+public void m1();
+public void m2();
+public void m3();
+ }
+
+ Now Violation :
+ Every method is not implemented i.e m3() in all 100 classes 
+ so you are not allowed to change the interface 
+
+ So New Concept introduced i.e Default method without modifing implemeting class we write as below
+ interface I{
+public void m1();
+public void m2();
+default void m3(){
+    .....
+}
+ }
+
+
+ Without Efecting implemention class we want to add the method this concept came 
+
+
+What is default here ?
+default means default imlementaion of method no need to implement but you can overide or Ignore
+
+Interface I {
+    default m1(){
+        System.out.println("default method");
+    }
+}
+-------------------
+class Test implement I {
+
+public static vaoid main(String args[]){
+
+    Test t = new Test();
+    t.m1();
+}
+
+}
+------------------------
+class Test implement I {
+public void m1(){
+    System.out.pritln("New Version 1");
+}
+public static vaoid main(String args[]){
+
+    Test t = new Test();
+    t.m1();
+}
+
+}
+--------------
+
+
+Question :
+Do you write default keyword of interface inside Test class 
+No default having different meaning so you cannot 
+
+
+Question :
+What is name of Object has method
+hashcode method 
+
+Question can we define hascode method inside interface
+No
+
+interface I {
+
+default int hascode(){
+    return 10;
+}
+
+}
+
+Compile Time Error : you are not allowed to Override the hascode method of java.lang.Object
+
+Reason : Every class already having hascode method because Object class method are allowed to every class 
+
+Question
+Is it possible to write Object class method as default inside interface 
+NO : because Object class method are allowed to every class so no need 
+
+Question 
+Is java suppourt multiple Inheritence ?
+No possible
+
+P1 class having m1()
+P2 class having m1()
+C class child implement P1 and P2 
+if c.m1() calls which method will call 
+
+Ambiguity 
+
+Code :
+
+class P1 {
+public void m1(){
+System.out.println("P1 method");
+
+}
+
+}
+class P2 {
+public void m1(){
+System.out.println("P2 method");
+
+}
+
+}
+
+
+class Test extends P1,P2 {
+public static void main(String args[]){
+Test t = new Test ();
+t.m1();// Which function to call 
+
+}
+
+}
+
+ Above code will shows error during compilation only because JAVA not suppourt Multiple Inheritence 
+
+Phyton Suppourt Multiple inheritence 
+
+ class P1:
+def m1(self):
+print('P1 method')
+
+class P2:
+def m1(self):
+print('P2 method')
+
+class C(P1,P2):pass
+
+c.C()
+c.m1()
+
+so If order is P1 first during inheriting then P1 m1 is called
+class C(P1,P2):pass 
+
+so if class C(P2,P1) then P2 m1 method is called :pass
+ 
+
+
+
+
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
 https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3
+https://www.youtube.com/watch?v=QaQK3oNWn5s&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=5
 
 
 
