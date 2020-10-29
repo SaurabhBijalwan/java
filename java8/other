@@ -820,10 +820,103 @@ interface I {
 Question :
 By Default static method are not available for child class 
 only one way for calling static method in interfaces I.m1();
+InterfaceName.methodName();
+
+Question :
+Can we inherit static method from Interfaces to Child class .
+No
+
+Explation 
+interface StaticMethodConcept {
+public static void m1(){
+    System.out.println("Static M1 method");
+}
+
+
+}
+
+class ImpemetationClass implements StaticMethodConcept {
+
+
+}
+
+public class MyInterfaceStaticMethod {
+
+    public static void main(String args[]){
+ImpemetationClass demo = new ImpemetationClass();
+
+//demo.m1(); // Compile Exception method m1 not found 
+StaticMethodConcept.m1();
+    }
+}
+
+Question 
+Is it possible execute main method in interface ?
+Yes 
+
+Explation 
+
+interface MyInterface {
+
+    public static void main(String[] args){
+System.out.println("Interface having Main method");
+
+    }
+}
+
+Is varibale wise some changes in java 1.8 
+No 
+
+Question Remember :
+Purpouse of default method : without effecting we want to add new funcationality
+Purpouse of static method : to define general utility inside Interface 
+
+Rule for static method : 
+1: bydefault not available to inherting classes
+2 : can be called using only InterfaceName.methodName()
+
+Question 
+Why functional Interface required 
+To call the Lambda Expression 
+FILE
+
+Question 
+java.util.function --Package 
+having several funcational Interface
+Predicate<T>	
+Represents a predicate (boolean-valued function) of one argument.
+
+Question 
+Multi Level Inheritence Vs Mutiple Inheritence 
+Java suppourt Multi Level inheritence i.e inference type
+
+Question 
+public abstract boolean test(T t)
+
+Predicate is used conditional check 
+return type is boolean 
+
+Explation :
+public boolean test(Integer t){
+    if(t%2==0){
+        return true;
+    }
+    else{ return false;}
+}
+
+(t)->(t%2==0)?true:false
+
+
+
+
+
+
+
 
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
 https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3
 https://www.youtube.com/watch?v=QaQK3oNWn5s&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=5
+https://www.youtube.com/watch?v=hVcQ5S50CY8&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=6
 
 
 
