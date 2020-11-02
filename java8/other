@@ -908,6 +908,12 @@ public boolean test(Integer t){
 
 
 
+Question :
+Without effecting implementation classes if we want to add new functionality to interface is possible 
+Yes using default 
+
+Question 
+To define general utility method inside interface 
 
 
 
