@@ -1,7 +1,7 @@
 Question What is programming language ,Software Technology and framework ?
-Programming Language :Core Java
-Software Technology :
-framework :struts ,spring ,hiberanete 
+Programming Language :Core Java , Raw material ,c++
+Software Technology : Semi finished product JDBC , servelet(arragange servlet container) , EJB(arrange ejb container) ,JSP(arragange jsp container)
+framework :fully finished product  struts ,spring ,hiberanete 
 
 Programming Language :
 Raw material to develop the software application 
@@ -51,6 +51,96 @@ vendor 1 : Sunmicrosystem
 vendor 2 oracle : JDBC driver software for oracle database 
 Vendor 3 IBM JDBC driver software for DB2 database software 
 All these vendors follow common rules and guidelines 
+
+Example 
+Tata , huydai , mauriti car are build on common rules and guidelines in car specification 
+if you know learn driving mauriti you can drive any other car
+
+Similary all jdbc technology developed by different vendor 
+if you know how to work with one you will know how to work with other 
+
+Question : 
+What is Java Framework ?
+
+Raw material 
+Programming language: Raw material : Wheats 
+Java Technology: Wheats powder
+Java Frameworks: Maggie noodle or patanjali noodles 
+
+Defination 1
+Frameworks are special installable software that is 
+built on the top of one or two or more technology 
+having the ability to generate common logic dynamically based on 
+Application specific logic given by the Programmer 
+
+Structs uses servlet jsp but it dont programmer to bother about servlet jsp 
+
+Defination 2 
+Framework is an special installable software that provide abstration layer on one or more technology 
+to simplify the application developement process
+example struts spring hibernate jsf etc
+
+Example 
+build house 
+Option 1 common specific activities : governent permission , dwelling 
+Option 2 specific activities : interior , vastu
+
+Option 1 : working with java technology 
+Option 2 : working with framework 
+
+so Framework said common logic take cae by framework and we need to care about spefic activities 
+
+Question :
+Let see Plain JDC application 
+means both common specific logic and specific logic done by us only 
+a : Register driver and driver manager Service  |
+b : Establish Connection with db software  | Common Logic
+c : create Statement Object  |
+
+d : Send and execute Query to DB software | Specific Logic 
+e : Gather result and process result  |
+
+f : Exception handling  - common logic 
+g : close the connection 
+
+Coomon logic is boiler plate code for several application 
+
+-> abc fg - common logic - Boiler plate code
+-> de - specific logic - changed application to application 
+
+Question 
+what do you mean Boiler palte code problem 
+Code repeat application to application 
+
+Spring JDBC Application 
+Inject JDBC template connection 
+send and sql query to database 
+Gather result and process result
+
+
+Notice that here we are spring jbdc connection is handling a,b,c,f, g take care of everything
+
+Question 
+Why framework are popular 
+Provides 
+Productivity is good -> less time we can develop more application 
+framework are designed after realtime usecases 
+example In online shopping website double posting problem is there 
+cliked in refresh button 
+double amount is deducted dublicate form is submitted 
+Bad practice - > In servlet need to write 100 of lines  
+override the method in spring resolved that problem 
+
+1 concentrate on specic logic only 
+
+
+How to Handling duplicate form submission in Spring MVC
+
+
+https://www.youtube.com/watch?v=bKi_cNUh-8w&list=PLVlQHNRLflP-wlUj1MAuLwiMekHpP-yQu&index=3
+
+
+
 
 
 
