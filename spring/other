@@ -1,0 +1,68 @@
+Question What is programming language ,Software Technology and framework ?
+Programming Language :Core Java
+Software Technology :
+framework :struts ,spring ,hiberanete 
+
+Programming Language :
+Raw material to develop the software application 
+Direct installable software 
+Defines Syntax (Rules ,;,{}) and Semantics(structure of programming i.e package top , class , constrcutor ) 
+Based to create tools ,technology and framework
+create Oracle(java) , Linix (c language) window(vc++)
+
+Software Technology : 
+Software specification providing set of rules and guidelines to create certain software by using one and another language suppourt.
+Uninstallable 
+JDBC is software technology provide the set of rule JBDC driver 
+Oracle thin driver : odjbc14.jar odbc16.jar represent jbdc driver 
+
+example :JDBC , servelet(arragange servlet container) , EJB(arrange ejb container) ,JSP(arragange jsp container)
+
+Another Angle :
+Course Browser: Technology (Topic name ) {Rules and regulation}
+Faculty :course browser faculty is software 
+
+Technology based software is importart i.e obdbc14.jar
+
+Interfaces  repreant Rules (must be implemented)
+class contains concreate method so whenever we extends in subclass so override is optional
+concreate class provide guidelines i.e may be follow 
+
+Question How many type of Technology 
+1 Open Technology;
+2 Properitetary Technology
+
+Luckly all java technolg developed by Sun microsystem is open Tehchnology 
+example obdbc , EJB , servlet 
+Open technology increase competion among vendors and which leads better software 
+
+
+Properitetary Technology 
+Rules and guidelines are specific to  on one vendor only 
+example : Microsoft tehnology is only allowed to make software 
+
+Question :
+How JDBC is allow to open tehnology JDBC Tehnology 
+In technology interfaces are rules 
+and classes and guidelines
+gives Rule and guidelines to delvelop JDBC technlogy : Vendor 1 ......Vendorn
+
+vendor 1 : Sunmicrosystem 
+vendor 2 oracle : JDBC driver software for oracle database 
+Vendor 3 IBM JDBC driver software for DB2 database software 
+All these vendors follow common rules and guidelines 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
