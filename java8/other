@@ -916,8 +916,43 @@ Question
 To define general utility method inside interface 
 
 
+Predifine Functional Interfaces 
+--------------------------------
+Predicate 
+Function 
+Consumer 
+Supplier 
+--------------------------------
+Two argument Predined functional Interface 
+------------------------------------------
+
+BiPredicate
+BiFunction
+BiConsumer
+
+primitive Funcation interfaces 
+-----------------------------------------
+IntPredicate
+IntFuncation
+Int Consumer 
 
 
+Predicate:
+---------------------
+Conditional check 
+Employe having gf or not because if he go to pub he required gf 
+sir if you required condition checks 
+
+Predicate(I) 
+public abstract boolean test(T t);
+
+Prototype;
+interface Predicate<T>{
+    public boolean test(T t);
+} 
+
+Predicate<Integer> p = (i)->i%2==0?true:false;
+System.out.println(p.test(2):t);//
 
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
 https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3

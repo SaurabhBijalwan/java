@@ -15,7 +15,7 @@ put the output in Map
 Using Java 8 
 
 Question 
-What is funcational dependency
+What is functional dependency
 
 Question 
 What is lambda expression 
@@ -23,5 +23,63 @@ What is lambda expression
 Question 
 Define the configuration file in spring 
 
+Question :
+So are you using predicate in the line you write 
+(i)->i*i;
 
 
+Answers :
+Correct 
+The String class is a God class in Java, It has got special features which is not available to other classes 
+e.g. String literals are stored in pools, You can concatenate strings using + operator. 
+Given its importance in Java programming, Java designer has made it final, which means you can not extend java.
+
+Answer 
+half correct:
+ No
+ Yes, an abstract class can have a constructor in Java. 
+ You can either explicitly provide a constructor to abstract class or if you don't, 
+ the compiler will add default constructor of no argument in abstract class.
+  This is true for all classes and it also applies to an abstract class
+
+ Purpouse : to avoid boiler plate code 
+ e.g
+ public abstract class A{
+     int i ,j;
+
+ } 
+public class B extends A {
+    int k , l;
+    B(int i , int j ,in k int l){
+       // Line 1
+         this.i=i;
+       //Line 2
+        this.j=j;
+        this.k=k;
+        this.l=l;
+    }
+}
+
+Line 1 and Line 2 repeated in every class extends A class so same class is repeating in several class
+To avoid Boiler plate code 
+
+public abstract class A {
+    int i , j;
+    A(int i, intj){
+        this.i=i;this.j=j;
+    }
+
+}
+
+public class B extends A {
+int k , int l;
+B(int i , int j ,int k ,int l){
+    //Line 3 
+    super(i,j);
+    this.k=k;
+    this.l=l;
+
+}
+
+}
+Line 3 call the constrcuctor of abstract class and 
