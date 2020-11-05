@@ -954,6 +954,12 @@ interface Predicate<T>{
 Predicate<Integer> p = (i)->i%2==0?true:false;
 System.out.println(p.test(2):t);//
 
+Question
+What is Predicate return type and input parameter 
+return type is boolean 
+only single parameter input 
+
+
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
 https://www.youtube.com/watch?v=mLnuX1cp3ds&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=3
 https://www.youtube.com/watch?v=QaQK3oNWn5s&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=5
