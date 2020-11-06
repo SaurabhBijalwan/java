@@ -918,9 +918,9 @@ To define general utility method inside interface
 
 Predifine Functional Interfaces 
 --------------------------------
-Predicate 
-Function 
-Consumer 
+Predicate<T> T Input Type Return Boolean 
+Function<T,R> T input R return 
+Consumer<T> T input and return void  
 Supplier 
 --------------------------------
 Two argument Predined functional Interface 
@@ -932,7 +932,7 @@ BiConsumer
 
 primitive Funcation interfaces 
 -----------------------------------------
-IntPredicate
+IntPredicate 
 IntFuncation
 Int Consumer 
 
@@ -958,6 +958,76 @@ Question
 What is Predicate return type and input parameter 
 return type is boolean 
 only single parameter input 
+
+Question 
+What we do if we required return type need not be boolean 
+Use Funcation<T,R> 
+T - input 
+R - return
+Function<String,Integer> i =(s)->s.length();
+
+Question 
+What is function Channing ?
+f1.addthen(f2).apply(i)// First F1 followed by f2 
+fi.compose(f2).apply(i) //First F2 followed by f1
+
+Note : In compose case first argumnent will execute and then the funcation i.e f2 followed by f1 
+
+Question 
+What is Consumer ?
+interface Consumer<T> {
+    // public void accept(T t);
+}
+
+Predicate<Integer> p =(i)->i%2==0?true:false;
+System.out.println( "Predicate<Integer> p =(i)->i%2==0?true:false; Input 1 "+p.test(1));//false;
+
+Function<String,Integer> f1 =(s)->s.length();
+System.out.println(f1.apply("saurabh"));// 7
+
+// FI
+Function<TcsEmployeeDetail,String> f2 = (employee)-> {
+    int score =employee.marks;
+    if(score>70) return "Grade A -Distinction";
+    if(score>60) return "Grade B -First";
+    if(score>50) return "Grade C -Second";
+    if(score>40) return "Grade D -Passed";
+    else return "Grade E -Failed";
+    
+};
+
+//Function channing explation----accept();
+Function<Integer,Integer> f11 =i->i*2;
+Function<Integer,Integer> f12 =i->i*i*i;
+
+System.out.println("first f1 i.e 2*2= 4 and then 4*4*4 =64  : "+f11.andThen(f12).apply(2)); // first f1 i.e 2*2= 4 and then 4*4*4 =64 
+System.out.println("first f2 i.e 2*2*2= 8 and then 2*8 =16   : "+f11.compose(f12).apply(2)); // first f2 i.e 2*2*2= 8 and then 2*8 =16 
+
+
+// Funcation for priting Employee details
+Consumer<TcsEmployeeDetail> c1 =(i)->{
+System.out.println("Name:" +i.name);
+System.out.println("Name:" +i.marks);
+
+};
+
+Consumer<TcsEmployeeDetail> c1 =(i)->{
+System.out.println("Name:" +i.name);
+System.out.println("Name:" +i.marks);
+
+};
+
+// calling printing function
+   c1.accept(empe); 
+
+for(TcsEmployeeDetail empe : employees){
+// Below line checking above 60 or not calling predicate
+if(p2.test(empe)){
+// calling printing function
+   c1.accept(empe); 
+   
+} 
+
 
 
 https://www.youtube.com/watch?v=k2PiRM2d_iU&list=PLd3UqWTnYXOlrKZWFTbgguqNRA_uVyeBl&index=2
