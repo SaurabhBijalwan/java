@@ -1,0 +1,51 @@
+hi
+// array list 12345 
+String[] arrayList = {1,2,3,4,5}
+
+// Colection ArrayList
+ArrayList arr = new ArrayList<Integer>();
+arr.add(1);
+arr.add(2);
+arr.add(3);
+arr.add(4);
+arr.add(5);
+arr.add(1);
+arr.add(2);
+
+// print odd numbers 
+function<ArrayList,Arraylist> c = (i)->i%2 !=0
+Sytem.out.println(c.get(arr);
+
+Consumer<ArrayList> c =(i)-> {
+if(i%2 !=0) System.out.print(i);
+}
+c.get(arr)
+
+// Print Non Duplicate Values 
+Consumer<ArrayList> c =(i)-> {
+HasMap map = new HashMap();
+if(i%2 !=0) {
+map.put(i);
+System.out.print(map)
+;}
+}
+Collection.sort(arr[i]==arr[j]?i:i+1)
+
+Consumer<ArrayList> c =(i)-> {
+HasMap map = new HashMap();
+if(i%2 !=0) {
+map.put(i);
+System.out.print(map)
+;}
+}
+Collection.sort(l,(emp1,emp2)->{emp1.id==emp2.id}?);
+System.out.print(l);
+
+// Spring
+ //JPA 
+ 
+ 
+
+
+
+
