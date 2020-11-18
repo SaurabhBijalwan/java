@@ -1,4 +1,8 @@
+package test;
+
 import java.util.function.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.*;
 
 public class MytestPredicate{
@@ -149,6 +153,52 @@ Employee(String name ,String department ,int salary){
     this.department= department;
     this.salary = salary;
 }
+
+
+
+
+public String getName() {
+	return name;
+}
+
+
+
+
+public void setName(String name) {
+	this.name = name;
+}
+
+
+
+
+public String getDepartment() {
+	return department;
+}
+
+
+
+
+public void setDepartment(String department) {
+	this.department = department;
+}
+
+
+
+
+public int getSalary() {
+	return salary;
+}
+
+
+
+
+public void setSalary(int salary) {
+	this.salary = salary;
+}
+
+
+
+
 public String toString(){
 return "Name:" +name+"department:"+department+"salary:"+salary ;
 
@@ -163,11 +213,57 @@ public void Demo(){
 List<Employee> employees = new ArrayList<>();
 employees.add(new Employee("Saurabh","IT",200000));
 employees.add(new Employee("Gaurav","IT",100000));
+employees.add(new Employee("Richa","IT",200000));
+employees.add(new Employee("kalyani","IT",100000));
 employees.add(new Employee("Swati","Medical",50000));
-
+employees.add(new Employee("BNBijalwan","Medical",30000));
 employees.forEach(System.out::println);
 
 // How to find the highest and lowest salary from the employee list
+Map<String,Employee> topPaidEmployees = employees.stream()
+.collect(Collectors.groupingBy(e-> e.getDepartment(),Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(e->e.getSalary())), Optional::get)));
+
+System.out.println("topPaidEmployees :::: "+topPaidEmployees);
+
+//
+Map<String,Employee> bottomPaidEmployees = employees.stream()
+.collect(Collectors.groupingBy(e-> e.getDepartment(),Collectors.collectingAndThen(Collectors.minBy(Comparator.comparingInt(e->e.getSalary())), Optional::get)));
+
+System.out.println("bottomPaidEmployees :::: "+bottomPaidEmployees);
+
+// How to get all the employee count 
+
+//Get all the Employee count
+Map<String,Long> countDepartmentWise = employees.stream()
+.collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
+System.out.println("countDepartmentWise :::: "+countDepartmentWise);
+
+// How to group by department using streams
+Map<String,List<Employee>> groupByDepartment = employees.stream()
+.collect(Collectors.groupingBy(e->e.getDepartment()));
+System.out.println("groupByDepartment :::: "+groupByDepartment);
+
+// How to find duplicate using streams
+// Method 1
+int[] inputArray= new int[] {111,222,333,333,777,888};
+Set<Integer> uniqueElements = new HashSet<>();
+Set<Integer> duplicateElements = Arrays.stream(inputArray).
+filter(i->!uniqueElements.add(i)).boxed().collect(Collectors.toSet());
+System.out.println("duplicateElements:"+duplicateElements);
+
+List<String> list = Arrays.asList("abc","def","gf","saurabh","saurabh","gf");
+Set<String> uniqueElements1 = new HashSet<String>();
+Set<String> duplicateElements1 = list.stream()
+.filter(i->!uniqueElements1.add(i)).collect(Collectors.toSet());
+System.out.println("duplicateElements1:"+duplicateElements1);
+
+//What is Flat map What is the advantage of FlatMap
+List<String> list1 =Stream.of("a","b").map(String::toUpperCase).collect(Collectors.toList());
+
+//How to find the Average of number using streams
+//What is Peek and give me some example
+
 }
 
     }
+
