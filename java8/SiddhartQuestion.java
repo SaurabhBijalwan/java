@@ -8,6 +8,7 @@ funcation pointer
 funcation ko pass kr dete ho as parameter 
 :: class by reference 
 
+
 interface Contract1 {
 
     m1();

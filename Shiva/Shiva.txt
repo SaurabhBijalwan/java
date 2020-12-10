@@ -1,1 +1,13 @@
 Aisa damru bajaya bhole nath ne 
+
+1 : TCS :8.6 
+2 : PayPal : 8.0
+3 : Capgemeini : Interview result Pending
+4 : TechMahindera : 9.6 
+5 : SingaporeBasedClient : 
+
+
+1 : Java 8 
+2 : Spring boot with Microservices 
+3 : React 
+4 : Hiberanate 
