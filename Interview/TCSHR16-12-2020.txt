@@ -1,0 +1,11 @@
+1 :Introduced Yourself
+2 :What project are you working on ?
+3 :How many years of experience do you have ?
+4 :Count the words repeated in an string ?
+5 :Are you willing to shift to banglore ?
+6 :How many employees do you think Akal Solution have ?
+7 : How are you seeing your life 5 years 
+8 : Would you love to be part of our organisation ?
+9 : How much are you expecting for banglore location ? 
+10: Can you predict the count of employees of TCS ?
+11 : Would you like to ask any question ? 
