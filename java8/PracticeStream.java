@@ -142,7 +142,7 @@ System.out.println("Name wise Sorting : " +LengthWiseAscending1);
 // removing duplicate using distinct() function 
 List<String> removeDuplicate = starList.stream().distinct().collect(Collectors.toList());
 System.out.println();
-System.out.println(".distinct() Removed Duplicates " + removeDuplicate);
+System.out.println(".distinct(). Removed Duplicates " + removeDuplicate);
 System.out.println();
 // How to use forEarch and distinct 
 starList.stream().distinct().forEach(e->System.out.println(e));
