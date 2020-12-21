@@ -1,0 +1,29 @@
+What is Spring Boot ?
+Spring is something that botstrap the spring 
+Spring makes it easy to create the standalone production greade spring based application 
+
+1 :StandAlone 
+2 :Production Grade 
+
+Spring Provide you framework or model to build you web application 
+Spring connect to mongoDb Postgres and different other 
+
+Problem :
+Huge Framework
+There are so many ways to develop the application 
+Spring need lot of Configuration Steps
+Capability and Flexability comes with a cost of Configuration
+
+so Introduces Spring Boot 
+
+Configuration Abstration provided by Spring Boot
+work on Bssiness logic only 
+
+Spring boot gives you
+opinionated स्वच्छंद
+Standalone Application - means it gives is something that can run standalone it is alos production ready 
+
+Step Required :
+Java 8 :
+IDE Spring STS : having flavour of Eclipse 
+
