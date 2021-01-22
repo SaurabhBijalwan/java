@@ -1,0 +1,17 @@
+What type of design pattern ?
+How join are using in Hiberante ?
+How you configure JPA in Spring ?
+Define oops Concept ?
+How you can annalyse the Processing Time 
+Let see execution time is 2 sec how you make it 1 sec 
+What type of Anotation are you using in SoringBoot ?
+What is difference between Strusts and spring ?
+Define the Spring ?
+Two Inteface having same method define and implemented by class which method will call or shows some error ?
+How to call Service from another service tell me the syntax?
+What is Executor service java.util.concurrent.ExecutorService ?
+What is Java 8 New Features ?
+
+
+
+

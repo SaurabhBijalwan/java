@@ -1,1 +1,9 @@
+StringStringBuilderStringBuffer
+https://www.youtube.com/watch?v=P5tFJ9umhvk
+https://www.youtube.com/watch?v=7IkpIQc8OCw
+
+https://www.javatpoint.com/java-design-pattern-interview-questions
 https://spring.io/guides#tutorials
+https://github.com/sudheerj/reactjs-interview-questions#what-is-react
+https://www.youtube.com/watch?v=F3uJyeAyv5g&list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas&index=13
+https://www.youtube.com/watch?v=1EIb-4ipWFk&list=PLqq-6Pq4lTTbXZY_elyGv7IkKrfkSrX5e&index=18

@@ -1,0 +1,32 @@
+Concept 2 
+
+Heap 
+String Collection Pool
+Stack 
+
+String s1 = new String("Saurabh"); // Two objected will created one is Heap and another in SCP area for future pupouse because of Literal
+String s2 = new String("Saurabh"); // Here one object is created because another "Saurabh" object is there in SCP AREA
+String s3="Saurabh" // Object already exist in SCP Area so no object is created
+String s4 ="Saurabh" //Object already exist in SCP Area so no object is created
+
+
+
+String s1 = new String("Saurabh"); // 1 Object created in Heap and 1 in SCP
+s1.contact("Bijalwan") // 1 Bijalwan in String Contact pool and one in Heap "Saurabh Bijalwan" but no reference so allow for garabage collection 
+
+
+Concept :
+String s1 = new String("spring");// 1 in Heap because of new and because of "" literal in SCP 
+s1.concat("fall");// because of "" one fall object is created in SCP and 1 "springfall" in heap because of run time 
+String s2 =s1.concat("winter") // 1 winter in SCP and springwinter in Heap having reference s2
+s2.concat("summer") // 1 obj in SCP i.e summer and springwintersummer is created in heap but no reference so not created 
+
+Sop(s1)//spring
+sop(s2)//springwinter
+
+ 
+Concept:
+String s1 = new String("you cannot change me") ; 1 heap because of new 1 SCP because of literal for future purpouse.
+String s2 = new String("You cannot change")1 obj in heap area only 1 copy in SCP is already there
+SOP(s1==s2) // False both obeject is refering different object 
+

@@ -1,0 +1,32 @@
+
+R1 
+1. Explain why multiple inheritance is not allowed in java .
+The reason behind this is to prevent ambiguity. Consider a case where class B extends class A and Class C and both class A and C have the same method display(). Now java compiler cannot decide, which display method it should inherit. To prevent such situation, multiple inheritances is not allowed in java
+ 
+2. Explain the volatile keyword in java. 
+Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe. It means that multiple threads can use a method and instance of the classes at the same time without any problem.
+
+Explain the Transient keyword in java ?
+The Trasient keyword in java is used to avoid serialization .if any object of a data structure is defined as transient then it will not be serialized .Serilization is the process of converting an object into byte stream .m.
+
+3. Explain different memory segments in java . 
+Code,Heap,Stack
+Heap- To store the object whose referacen 
+
+1. Difference between new and "" while creating string objects in java. 
+2.. write a  function to return the first non repeated character from a string in java. 
+3. Write a function to check if a string is a number or not . 
+
+1. List all the main interfaces from the collection framework in java. 
+2. Explain how a hashset uses hashcode . 
+3. How hashcode and equal methods are related . 
+4 . Explain how hashset maintains uniqueness in java. 
+5 . write a java program to iterate over a hashmap in java. 
+
+1 . How do we achieve inter thread communication in java? 
+2. How do multiple threads share resources ? 
+3. Explain if ++ operator is thread safe or not . 
+
+1 . write a query to return the fifth highest salary from the employee table
+
+

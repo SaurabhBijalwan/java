@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=F3uJyeAyv5g&list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas&index=13
+
+https://github.com/koushikkothagal/spring-boot-microservices-workshop
+
+Microservice one service interact with other service 
+
+Load balacing is generic problem in microservice 
+
+Monolith -> Break into mocroservices 
+
+Patter and Technology
+ 
+https://www.youtube.com/watch?v=kq_0goMjKOs&list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas&index=3
+
+IP Locater service in spring at Endpoint we give IP and it provide us the location 
+
+While in mocroservice it is not like that 
+
+Step 1:
+
+Start.spring.io
+
+Create a project for springboot add spring web and download three project 
+
+Step 2:
+Create a Class for Controller
+Add RestController anotation 
+
+
+Step 3 
+RestClient vs WebClient
+

@@ -1,0 +1,49 @@
+  
+      Concept 1 :
+
+      String s1 = new String("Saurabh"); 
+      s1.concat("Bijalwan"); 
+      // Once we create an object we are not allow to make the change this non change behaviour is Immutability while new object "Saurabh Bijalwan" created without reference
+      System.out.println(s1);
+      
+      StringBuffer s2 = new StringBuffer("Saurabh");
+      s2.append(" Bijalwan"); // No new object created because it is mutable 
+      // this changable behaviour is known as mutable
+      System.out.println(s2);
+
+
+     Concept 2 :
+
+      String s1 = new String("Saurabh");
+      String s2 = new String("Saurabh");
+
+      StringBuffer sb1 = new StringBuffer("Saurabh");
+      StringBuffer sb2 = new StringBuffer("Saurabh"); 
+
+System.out.println(s1==s2);//false both are not point to same object
+System.out.println(sb1==sb2);//false 
+
+
+System.out.println(s1.equals(s2));//true both object having same value 
+System.out.println(sb1.equals(sb2));//false not overridden the object class in Stringbuffer so only refernce is comparing 
+
+     Concept 3 :     
+
+-> Object class equals method ment for reference comparision not for content comparision as ==
+-> While It is overriden as content comparsion 
+System.out.println(s1.equals(s2));//true both object having same value 
+System.out.println(sb1.equals(sb2));//false not overridden the object class in Stringbuffer so only refernce is comparing 
+
+
+Concept 4:
+   String differnt Hascode as diferent object created because Immutable 
+   String Buffer same hascode append on the same Object
+      String s1 = new String("Saurabh");
+      System.out.println("S1 Previous String Object HasCode: "+s1.hashCode()); //S1 Previous String Object HasCode: -758033668
+      s1=s1.concat(" Bijalwan");
+      System.out.println("S1 New Object Refrence HasCode: "+s1.hashCode()); //S1 New Object Refrence HasCode: -2075425670
+      
+      StringBuffer sb1 = new StringBuffer("Saurabh");
+      System.out.println("sb1 Stringbuffer HasCode: "+sb1.hashCode()); //sb1 Stringbuffer HasCode: 2101842856
+      sb1=sb1.append("Bijalwan");
+      System.out.println("sb1 same Stringbuffer HasCode: "+sb1.hashCode()); //sb1 same Stringbuffer HasCode: 2101842856
