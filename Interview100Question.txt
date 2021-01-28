@@ -1,0 +1,35 @@
+https://www.frgconsulting.com/blog/java-interview-questions/
+
+Popular Topics to Consider for a Java Interview
+
+There are a few topic areas to focus on when preparing for a Java interview and you should brush up on the following areas:
+
+Concepts from core Java:
+
+OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)
+Basic Java constructs like loops and data types
+String handling
+Collection framework
+Multithreading
+Exception handling
+Generics
+Synchronisation
+Serialisation & De-serialisation
+Concurrent collection
+
+Advanced Java:
+
+JDBC (Java Database Connectivity)
+Servlet
+JSP
+
+Popular Frameworks:
+
+Spring (MVC, Core, JDBC, ORM, AOP)
+Hibernate ORM framework
+Struts
+JSF
+Web Services (SOAP & REST)
+Other:
+
+Design patterns and design questions related to your projects.

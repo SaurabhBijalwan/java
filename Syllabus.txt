@@ -1,0 +1,17 @@
+A Java Technology 
+  (a) Core Java 
+  (b) Advance Java 
+  (c) Frameworks
+  
+B React Technolgy
+  (a) Front End Development Approach
+
+
+(a) Core Java -Concept
+   1. Thread
+   2. String Imutable String Builder Mutable String Buffer Thread Safe
+  
+
+
+(b) Advance Java 
+  (c) Frameworks
