@@ -1,0 +1,178 @@
+https://www.youtube.com/watch?v=AVdD987trsc
+
+1 -> Map is not child element of collection
+
+2 When we go for Map 
+-> if you want to store data in Key value pair or name value pair
+
+3 Duplicate key is not allowed Duplicate values in allowed 
+
+4 Each Key value pair is Entry 
+
+5 Both Key and values are Object only example "" String
+
+6 Map is Collection of Entry Object 
+
+7 Put - Add 
+
+8 Collection talk about Collection of Object while Map method talks about key value pair
+
+9 Map map = new HashMap();
+map.put("One",1);// both key and value are Object
+map.put("One",2); // Replace Old value with new value and return Old value ;
+
+10 put() method
+public V put(K key, V value) {
+    if (key == null) // Checking value is null
+    return putForNullKey(value); // returning 
+    int hash = hash(key.hashCode());
+    int i = indexFor(hash, table.length);
+    for (Entry<K , V> e = table[i]; e != null; e = e.next) {
+        Object k;
+        if (e.hash == hash && ((k = e.key) == key || key.equals(k))) {
+            V oldValue = e.value;
+            e.value = value;
+            e.recordAccess(this);
+            return oldValue;
+        }
+    }
+ 
+    modCount++;
+    addEntry(hash, key, value, i);
+    return null;
+} 
+
+
+11 Example
+map.put(101,"Ravi")-- return null
+map.put(102,"Meenu")-- Return null
+map.put(101,"Sanju")-- return Ravi and replace Ravi with Sanju
+
+12 map.putAll(map);// add group of key value pair
+map.get(Object key); // return the value associated with specified key
+map.contains(key)// boolean contains key 
+ // boolean contains value
+
+map.remove(key)// remove the entry of specified key
+
+
+13 These three methods are Collection View of Map 
+public Set<K> keySet()  
+public Collection<V> values() ;
+public Set<Map.Entry<K,V>> entrySet()
+
+14  Map is group of Key value pairs and each key value is called an Entry hence 
+Map is consider as group of Entry objects
+
+15 Without Existing Map Object there is no change of existing Entry Object hence 
+Entry interface is define inside Map interface 
+
+16 Interface Map<K,V> 
+public static interface Map.Entry<K,V>
+
+17 The unmderline datastrucutre is Hashtable 
+
+18 Insertion orde is not preserved and it is based on hashcode of keys 
+19 Duplicate keys are not allowed but values can be duplicated 
+20 Hetrogeneous Object are allowed for both key and value 
+21 Null is allowed for key [only once]
+22 Null is allowed for values [any number of times]
+23 HashMap implements serilizable and clonable interfaces but not reandom access
+24 HashMap is best choice if our frequent objection is search 
+25 Different Constructor of HashMap 
+   1 HashMap m = new HashMap()// Creates an Empty Hashmap capacity intial capacticity 16 and fill ratio .75
+   2 HashMap m = HashMap(int initialCapacity);
+   3 HashMap(int initialCapacity, float loadFactor)
+   4 HashMap<K, V> hm = new HashMap<K, V>(Map map);
+26 How to use Map interface method 
+   import java.util.map 
+
+HashMap<String, Integer> map =new Hashmap();
+map.put("Saurabh",10000000);
+map.put("Gaurav",1000000);
+map.put("Swati",100000);
+
+for(Map.Entry<String,Integer> e  : map.entrySet())
+{
+System.out.println(e.getKey()+":"+e.hashCode());
+}
+
+27 Difference between Hashmap and Hashtable
+
+28 How to get syncroniszed version of Hashmap Object 
+-> Hashmap m = new HashMap();
+Map m1 =Collection.syncronizedmap(m);
+
+by default hashmap is non synchronized but we can get synchronized version of HashMap by using syncronizedmap() method of Collection class 
+
+29 LinkedHashMap 
+-> Child class of HashMap
+-> Exactly Same as HashMap including method and constructor except the following differences 
+Hasmap 		LinkedHashMap
+1 the underlying datastrucuture is Hash table underlying datastructuire is a combination of linkedList and Hastable (hybrid dataStructure)
+2 Insertion order is not preseved and it is based on hascode of keys Insertion order is preserved 
+3 Introduced in 1.2 version Introduced in 1.4 version 
+
+In the above Hashmap program if we replace Hashmap with LinkedHashMap()
+-> LinkedHasMap and LinkedHashSet are commonly used for cache based application 
+ 
+
+30 == equalsof reference comparision and equals method is used for content comparion 
+In general == operator meant for reference comparssion (address comparsion) where as .equals method meant for content comparion example
+
+Integer i1 = new Integer(10);
+Integer i2 = new Integer(10);
+
+System.out.println(i1==i2);//false
+
+System.out.println(i1.equals(i2));//true
+
+31 IdentityHashMap
+-> It is exactly same as HashMap including method and construcotor expcept the following difference 
+-> In the case of Normal HashMap jvm will use .equals method to identify duplicate keys which is meant for content comparison 
+-> but in the case of Identity Hasmap JVM will use == operator to identify duplicate keys which is meant for reference comparision address comparison 
+
+HashMap map = new HashMap();
+Integeter I1 = new Inetger(10);
+Integeter I2 = new Inetger(10);
+
+map.put(I1,"Kalyan");
+map.put(I2,"Kalyan");
+
+
+HashMap map = new HashMap();
+
+Integer I1 = new Integer(10);
+
+Integer I2 = new Integer(10);
+
+
+map.put(I1,"Kalyan");
+
+map.put(I2,"Kalyan");
+
+System.out.println(map); // comparing using equals() method i.e using content
+IdentityHashMap map1 = new IdentityHashMap();
+
+
+
+map1.put(I1,"Kalyan");
+
+map1.put(I2,"Kalyan");
+System.out.println("LinkedHashMap-"+ map1);//comparing using == i.e using reference 
+       System.out.println(I1.equals(I2));//true
+
+System.out.println(I1==I2);//false
+ 
+o/p
+HashMap{10=Kalyan}
+
+LinkedHashMap-{10=Kalyan}
+
+
+
+
+32 WeekHashMap
+ WeakHashMap map1 = new WeakHashMap();
+
+

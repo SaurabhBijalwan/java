@@ -13,3 +13,6 @@ https://www.youtube.com/watch?v=9jSd72rQx34
 
 React Question -5o
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
+
+Java Interview Questions
+https://howtodoinjava.com/java-interview-questions/
