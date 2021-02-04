@@ -26,6 +26,6 @@ public class Interview2 {
          i++;
      }
      
-     System.out.println(uniqueString);
+     System.out.println(uniqueString);//AB
     }
 }

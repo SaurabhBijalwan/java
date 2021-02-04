@@ -6,7 +6,7 @@ public class Interview1 {
     int j= sb1.length() -1;
     while(i<sb1.length()){
     
-    if(j<i) {System.out.println(i);i=  sb1.length();}
+    if(j<i) {System.out.println(i);i=  sb1.length();} // When crs
      
    else{
             
@@ -26,7 +26,7 @@ public class Interview1 {
         
     }// While(i<sb.length())
     
-      System.out.println(sb1);
+      System.out.println(sb1);// Saurabh is good boy .He is living at Dehradun 
     }//Main()
     
      static void swap(String s){
