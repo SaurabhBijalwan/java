@@ -1,4 +1,4 @@
-// Find the unique character from a String
+// Count the Unique character from the String 
 
 public class Interview3 {
     public static void main(String args[]) {
