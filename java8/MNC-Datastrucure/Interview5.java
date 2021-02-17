@@ -118,6 +118,7 @@ class HashMapCustom<K, V> {
    
    }
    
+   // User define method for calcualting Hash value
    private int hash(K key){
        return Math.abs(key.hashCode()) % capacity;
    }
