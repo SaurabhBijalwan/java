@@ -1,0 +1,54 @@
+Q1:===[ArrayList, HashSet, and HashMap],[ConcurrentHashMap or CopyOnWriteArrayList]
+
+Describe and compare fail-fast and fail-safe iterators. Give examples.
+The main distinction between fail-fast and fail-safe iterators is whether or not the collection can be modified while it is being iterated. Fail-safe iterators allow this; fail-fast iterators do not.
+
+Fail-fast iterators operate directly on the collection itself. During iteration, fail-fast iterators fail as soon as they realize that the collection has been modified (i.e., upon realizing that a member has been added, modified, or removed) and will throw a ConcurrentModificationException. Some examples include ArrayList, HashSet, and HashMap (most JDK1.4 collections are implemented to be fail-fast).
+
+Fail-safe iterates operate on a cloned copy of the collection and therefore do not throw an exception if the collection is modified during iteration. Examples would include iterators returned by ConcurrentHashMap or CopyOnWriteArrayList.
+
+Q2 :
+=====
+What modification done in HashMap in Java8
+Search in an index containing serveral linkedList having complexity o(n) it is now in Java 8 if collosion is happening in HashMap then it is using Binary Search tree small in left and greater in right side so complexity is now log(n)
+
+Simiple java 8 change the complexity from n to logn which is better using BST in case of collison
+You already know that complexity of hashmap is o(1)
+ 
+Q3:
+====
+Define Collection Interface ?
+Collection interface having 3 interfaces 
+Set , List , Queue
+Set is implemented by HashSet, LinkedHashSet, TreeSet(implements SorrtedSet in middle and it implements Set)
+
+List interface is implemented by ArraYList , Vector LinkedList
+Queue interface is implemented by LinkedList and PriorityQueue
+
+Q4: Difference between ArrayList , LinkedList Vector
+
+ArrayList and Vector implements List intterface only 
+
+ArrayList : it is Resizable Array , Size increased by adding values to it 
+
+LinkedList : It is Double Linked List its performance on add and remove is better than ArrayList but worse on get and Set methods
+
+Vector : Similar to ArrayList but it is syncronized 
+
+Q5 :
+What to use and When 
+ArrayList is better choice if you program is thread safe 
+Vector each time double its array Size while array list grow 50 % of its size each time 
+LinkedList implements List as well Queue so Queue adds more methods such as offer() , peek(), poll()
+
+Q6:
+===== 
+Syntax of Arraylist , Vector and LinkedList
+int n = 5; //
+ArrayList<Integer> arrayList = new ArrayList<>();
+LinkedList<Integer> linkedList = new LinkedList<>();
+Vector<Integer> v = new Vector<Integer>(n);
+
+
+
+
