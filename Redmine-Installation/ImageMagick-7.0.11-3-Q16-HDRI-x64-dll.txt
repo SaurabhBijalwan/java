@@ -1,0 +1,1 @@
+ImageMagick-7.0.11-3-Q16-HDRI-x64-dll.txt

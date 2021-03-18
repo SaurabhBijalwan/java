@@ -1,0 +1,107 @@
+https://www.redmine.org/projects/redmine/wiki/redmineinstall
+
+Environment:
+  Redmine version                4.1.1.stable
+  Ruby version                   2.6.6-p146 (2020-03-31) [x64-mingw32]
+  Rails version                  5.2.4.1
+  Environment                    production
+  Database adapter               PostgreSQL
+  Mailer queue                   ActiveJob::QueueAdapters::AsyncAdapter
+  Mailer delivery                smtp
+SCM:
+  Git                            2.28.0
+  Filesystem                     
+Redmine plugins:
+  no plugin installed
+
+======================================
+
+production:
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      enable_starttls_auto: true
+      address: "smtp.gmail.com" 
+      port: 587
+      domain: "smtp.gmail.com" 
+      authentication: :plain
+      user_name: "bijalwang@gmail.com" 
+      password: "Uk@12345" 
+
+========================================
+
+rubyinstaller-devkit-2.6.6-2-x64.exe
+ImageMagick-7.0.11-3-Q16-HDRI-x64-dll.exe
+redmine-4.1.1.zip
+
+=========================================
+
+Installation procedure
+
+Step 1 - Redmine application -redmine-4.1.1.zip
+Step 2 - Create an empty database and accompanying user
+
+PostgreSQL
+
+CREATE ROLE redmine LOGIN ENCRYPTED PASSWORD 'my_password' NOINHERIT VALID UNTIL 'infinity';
+CREATE DATABASE redmine WITH ENCODING='UTF8' OWNER=redmine;
+
+Step 3 - Database connection configuration
+Copy config/database.yml.example to config/database.yml 
+
+production:
+  adapter: postgresql
+  database: redmine
+  host: localhost
+  port: 5433
+  username: postgres
+  password: "postgres"
+
+
+
+Step 4 - Dependencies installation
+
+gem install bundler 
+
+bundle install --without development test
+
+
+Optional dependencies
+
+bundle install --without development test rmagick
+
+Database adapters
+Don't forget to re-run bundle install --without development test
+
+Additional dependencies (Gemfile.local)
+# Gemfile.local
+gem 'puma'
+
+Step 5 - Session store secret generation
+
+bundle exec rake generate_secret_token
+
+Step 6 - Database schema objects creation
+
+RAILS_ENV=production bundle exec rake db:migrate
+
+Step 7 - Database default data set
+
+set RAILS_ENV=production
+set REDMINE_LANG=en
+bundle exec rake redmine:load_default_data
+
+Step 8 - File system permissions
+NB: Windows users can skip this section.
+
+Step 9 - Test the installation
+
+bundle exec rails server webrick -e production
+
+Step 10 - Logging into the application
+
+login: admin
+password: admin
+
+https://www.redmine.org/projects/redmine/wiki/RedmineBackupRestore
+
