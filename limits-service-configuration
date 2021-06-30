@@ -1,2 +1,2 @@
-limits-service.minLimit=200
-limits-service.maxLimit=2200
+limits-service.minLimit=5
+limits-service.maxLimit=5
